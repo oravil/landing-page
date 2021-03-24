@@ -49,8 +49,9 @@ sections.forEach((element) => {
     link.classList.add(['menu__link']);
     link.id = `link-${element.getAttribute("id")}`;
     
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
     element.scrollIntoView({ behavior: "smooth" });
+    e.preventDefault();
   });
 
   link.appendChild(node);
